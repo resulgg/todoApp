@@ -1,0 +1,262 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 200px auto;
+  position: relative;
+}
+
+.popup-btn{
+  position: absolute;
+  margin: 280px auto;
+  background-color: #212529;
+  color: #ebebeb;
+  font-size: 4rem;
+  padding: 1.3rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all .4s ease;
+  user-select: none;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(1.4);
+  
+}
+.popup-btn:active{
+  transform: scale(1.2);
+  opacity: 0.6 ;
+}
+.popup-btn:hover{
+  transform: scale(1.7);
+  background-color: #ffff;
+  border: 1px solid #212529;
+  color: #212529;
+}
+
+.container {
+  max-width: 1100px;
+  width: 80%;
+  border: 1px solid #ebebeb;
+  padding: 40px 50px 10px 50px;
+  border-radius: 1rem;
+  display: flex;
+  transform: scale(0);
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s ease;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.close-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-top: .5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  transition: all 1s ease;
+}
+.close-btn:hover{
+  transform: rotate(360deg);
+}
+.top {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.h2text {
+  font-size: 4rem;
+  color: #212529;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  border: none;
+  outline: none;
+  padding: 1rem 0rem;
+  width: 100%;
+  text-align: center;
+  transition: all .3s ease;
+}
+.h2text[type="text"]{
+  width: 100%;
+}
+.search-bar {
+  width: 100%;
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.search-bar input {
+  font-family: "Poppins", sans-serif;
+  width: 90%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #212529;
+  padding: 1rem 0.1rem;
+  border: none;
+  outline: none;
+}
+.search-bar input::placeholder {
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #7c7c7c;
+}
+.search-bar .fa-plus {
+  color: #7c7c7c;
+  font-size: 1.4rem;
+  margin-left: 1.2rem;
+  margin-right: 1rem;
+}
+.search-bar .add-btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  padding: 0.2rem 1.6rem;
+  background-color: transparent;
+  height: 70px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  outline: none;
+}
+.search-bar .add-btn:hover {
+  transform: scale(1.3);
+}
+
+.alertNoti {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.4rem;
+  background-color: #e6f2ff;
+  margin-top: 1.7rem;
+  border-radius: 0.6rem;
+  display: none;
+  font-family: "Poppins", sans-serif;
+}
+.alertNoti.shownoti {
+  display: flex;
+}
+
+.todos {
+  width: 100%;
+  padding: 0.8rem 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 1.2rem;
+}
+.todos .todo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 1rem;
+  position: relative;
+}
+:has(.fa-trash:hover) .time-adjust {
+  display: block;
+}
+
+.time-adjust {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: -22px;
+  font-size: 0.7rem;
+  color: #7c7c7c;
+
+}
+.todos .todo .todo-text {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+  word-break: break-all;
+  padding-right: 1.2rem;
+}
+.todos .todo .todo-text .todo-value {
+  font-size: 1.2rem;
+  color: #444444;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.todos .todo .todo-text .todo-value.checked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: line-through;
+  text-decoration-color: #212529;
+  text-decoration-thickness: 2px;
+}
+.todos .todo .todo-text .todo-value.checked::before {
+  content: "🐼";
+  position: absolute;
+  transform: scale(1.1);
+}
+
+.todo .fa-trash {
+  color: #7c7c7c;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+.todo .fa-trash:hover {
+  color: #ff6b6b;
+  transform: scale(1.3);
+}
+.fa-plus {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.fa-plus:hover {
+  color: #ff6b6b;
+  transform: scale(1.3) rotate(360deg);
+}
+
+.clear-all {
+  padding: 10px 20px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #212529;
+  background-color: #f1f1f14c;
+  transition: all 0.2s ease;
+  display: none;
+}
+.clear-all.showMe {
+  display: flex;
+}
+.clear-all:hover {
+  transform: scale(1.1);
+}
+.clear-all:active {
+  opacity: 0.5;
+}
+
+.bottom-block{
+  height: 100%;
+  width: 100%;
+}

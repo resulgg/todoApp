@@ -1,0 +1,56 @@
+@media (max-width: 800px) {
+  body {
+    margin: 180px auto;
+  }
+  .popup-btn {
+    margin: 140px auto;
+    transform: scale(0.5);
+    width: 500px;
+  }
+  .popup-btn:hover {
+    transform: scale(0.7);
+  }
+  .todos{
+    margin-top: 0.8rem;
+  }
+  .container {
+    width: 85%;
+    padding: 20px 30px;
+  }
+  .todos .todo .todo-text .todo-value {
+    font-size: 1rem;
+  }
+  .alertNoti {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: #e6f2ff;
+    margin-top: 1.7rem;
+    border-radius: 0.6rem;
+    display: none;
+  }
+  .search-bar {
+    height: 45px;
+  }
+  .search-bar input {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+  .search-bar input::placeholder {
+    font-size: 1rem;
+  }
+  .search-bar .fa-plus {
+    display: none;
+  }
+  .todo .fa-trash {
+    font-size: 0.8rem;
+  }
+  .search-bar .add-btn {
+    font-size: 1.4rem;
+    padding: 0.2rem 0.7rem;
+  }
+  .h2text {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+}
